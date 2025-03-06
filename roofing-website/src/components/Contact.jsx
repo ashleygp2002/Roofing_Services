@@ -1,14 +1,15 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import Navbar from "./Navbar";  // ✅ Import Navbar
+// import { Link } from "react-router-dom";
+import Navbar from "./Navbar"; 
+import Footer from "./Footer";
 
 const Contact = () => {
   return (
     <div className="bg-gray-100 min-h-screen flex flex-col">
-      {/* ✅ Navbar at the top */}
+
       <Navbar />
 
-      {/* ✅ Centered Contact Content */}
+
       <div className="flex flex-col items-center justify-center text-center flex-grow">
         <h2 className="text-4xl font-bold">Get in Touch</h2>
         <p className="text-gray-600 mt-2">We’d love to hear from you!</p>
@@ -36,9 +37,8 @@ const Contact = () => {
             <p className="text-gray-700">123 Roofing St, City, State</p>
           </div>
         </div>
-
-        {/* ✅ Removed Back to Home button (now the Logo does this) */}
       </div>
+      <Footer />
     </div>
   );
 };

@@ -1,101 +1,102 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import Navbar from "./Navbar";  
+import roofingImage from "../assets/roofing.jpg";
+import Footer from "./Footer";
 
 const Quote = () => {
-    const [isSubmitted, setIsSubmitted] = useState(false);
-    const [isSubmitting, setIsSubmitting] = useState(false); // ✅ New state to prevent double submissions
+  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false); 
 
-    const handleSubmit = async (e) => {
-    e.preventDefault(); // Prevent page reload
+  const handleSubmit = async (e) => {
+    e.preventDefault(); 
 
-    if (isSubmitting) return; // ✅ Prevent clicking multiple times
-    setIsSubmitting(true); // ✅ Disable button after first click
+    if (isSubmitting) return; 
+    setIsSubmitting(true); 
 
-    const formData = new FormData(e.target);
+    try {
+      const formData = new FormData(e.target);
 
-    await fetch("https://formsubmit.co/ajax/royalcrownroofingservices@gmail.com", {
+      const response = await fetch("https://formsubmit.co/ajax/royalcrownroofingservices@gmail.com", {
         method: "POST",
         body: formData,
         headers: {
-        "Accept": "application/json",
+          "Accept": "application/json",
         },
-    })
-        .then((response) => response.json())
-        .then((data) => {
-        if (data.success) {
-            setIsSubmitted(true); // ✅ Show success message
-        } else {
-            alert("Error sending request. Please try again.");
-        }
-        })
-        .catch((error) => console.error("Form Submission Error:", error))
-        .finally(() => setIsSubmitting(false)); // ✅ Re-enable button after submission
-    };
+      });
 
+      const data = await response.json();
+
+      if (data.success) {
+        setIsSubmitted(true);
+      } else {
+        alert("Error sending request. Please try again.");
+      }
+    } catch (error) {
+      console.error("Form Submission Error:", error);
+      alert("Something went wrong. Please try again later.");
+    } finally {
+      setIsSubmitting(false); 
+    }
+  };
 
   return (
-    <QuoteContainer>
-      <Navbar /> {/* ✅ Navbar stays on this page */}
+    <div className="bg-cover bg-center min-h-screen flex flex-col"
+      style={{ backgroundImage: `url(${roofingImage})` }}>
+      
+      <Navbar />
 
-      <FormWrapper>
-        {isSubmitted ? (
-          <SuccessMessage>Your quote request has been sent successfully! 🎉</SuccessMessage>
-        ) : (
-          <>
-            <h1>Request a Quote</h1>
-            <form onSubmit={handleSubmit}>
-              <input type="text" name="name" placeholder="Your Name" required />
-              <input type="email" name="email" placeholder="Your Email" required />
-              <input type="tel" name="phone" placeholder="Your Phone Number" required />
+      <div className="flex flex-grow items-center justify-center">
+        <FormWrapper>
+          {!isSubmitted ? (
+            <>
+              <h1>Request a Quote</h1>
+              <form onSubmit={handleSubmit}>
+                <input type="text" name="name" placeholder="Your Name" required />
+                <input type="email" name="email" placeholder="Your Email" required />
+                <input type="tel" name="phone" placeholder="Your Phone Number" required />
 
-              {/* Service Dropdown */}
-              <Select name="service" required>
-                <option value="">Select a Service</option>
-                <option value="Roof Repair">Roof Repair</option>
-                <option value="New Roof Installation">New Roof Installation</option>
-                <option value="Gutter Installation">Gutter Installation</option>
-                <option value="Maintenance & Cleaning">Maintenance & Cleaning</option>
-                <option value="Emergency Roofing">Emergency Roofing</option>
-              </Select>
+                {/* Service Dropdown */}
+                <Select name="service" required>
+                  <option value="">Select a Service</option>
+                  <option value="Roof Repair">Roof Repair</option>
+                  <option value="New Roof Installation">New Roof Installation</option>
+                  <option value="Gutter Installation">Gutter Installation</option>
+                  <option value="Maintenance & Cleaning">Maintenance & Cleaning</option>
+                  <option value="Emergency Roofing">Emergency Roofing</option>
+                </Select>
 
-              <textarea name="message" placeholder="Additional Details" required></textarea>
+                <textarea name="message" placeholder="Additional Details" required></textarea>
 
-              {/* Hidden Fields for Email Formatting */}
-              <input type="hidden" name="_captcha" value="false" />
-              <input type="hidden" name="_template" value="box" />
+                {/* Hidden Fields for Email Formatting */}
+                <input type="hidden" name="_captcha" value="false" />
+                <input type="hidden" name="_template" value="box" />
 
-              <button type="submit" disabled={isSubmitting} className={`w-full py-2 rounded-md ${isSubmitting ? "bg-gray-500" : "bg-black text-white"}`}>
-                {isSubmitting ? "Sending..." : "Send Quote Request"}
+                <button type="submit" disabled={isSubmitting} className={`w-full py-2 rounded-md ${isSubmitting ? "bg-gray-500" : "bg-green-600 text-white"}`}>
+                  {isSubmitting ? "Sending..." : "Send Quote Request"}
                 </button>
+              </form>
+            </>
+          ) : (
+            <SuccessMessage>Your quote request has been sent successfully!</SuccessMessage>
+          )}
+        </FormWrapper>
+      </div>
+      <Footer />
+      
+    </div>
 
-            </form>
-          </>
-        )}
-      </FormWrapper>
-    </QuoteContainer>
   );
 };
 
-const QuoteContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh; /* Ensures full-page height */
-  background: url('/assets/roofing-bg.jpg') no-repeat center center;
-  background-size: cover;
-  padding: 20px;
-  width: 100%;
-`;
 
 const FormWrapper = styled.div`
-  background: rgba(0, 0, 0, 0.7);
-  backdrop-filter: blur(10px);
+  background: rgba(0, 0, 0, 0.3); 
+  backdrop-filter: blur(10px); 
   padding: 40px;
   border-radius: 15px;
   max-width: 500px;
-  width: 100%;
+  width: 90%;
   text-align: center;
   box-shadow: 0px 8px 32px rgba(0, 0, 0, 0.5);
   color: white;
@@ -103,6 +104,7 @@ const FormWrapper = styled.div`
   h1 {
     font-size: 2.5rem;
     margin-bottom: 20px;
+    color: white;
   }
 
   form {
@@ -117,7 +119,7 @@ const FormWrapper = styled.div`
     border: none;
     border-radius: 10px;
     font-size: 1rem;
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.2); 
     color: white;
     outline: none;
     transition: all 0.3s ease-in-out;

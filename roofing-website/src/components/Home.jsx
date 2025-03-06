@@ -6,13 +6,13 @@ import project3 from "../assets/project3.jpg";
 import testimonial1 from "../assets/testimonial1.png";
 import testimonial2 from "../assets/testimonial2.png";
 import testimonial3 from "../assets/testimonial3.png";
-import { Link } from "react-router-dom";
-import Navbar from "./Navbar"; // ✅ Import Navbar
+// import { Link } from "react-router-dom";
+import Navbar from "./Navbar"; 
 
 const Home = () => {
   return (
     <div className="font-sans">
-      {/* ✅ Navbar at the top */}
+
       <Navbar />
 
       {/* Hero Section */}
