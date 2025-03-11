@@ -1,0 +1,149 @@
+{
+  "navbar": {
+    "home": "Inicio",
+    "services": "Servicios",
+    "projects": "Proyectos",
+    "contact": "Contacto",
+    "getQuote": "Solicitar Cotización"
+  },
+  "hero": {
+    "title": "Descubre soluciones de techado de primera",
+    "subtitle": "Servicios de techado profesionales adaptados a tus necesidades."
+  },
+
+  "services": {
+    "title": "Cómo Trabajamos",
+    "subtitle": "Un proceso simple y profesional para garantizar servicios de calidad en techos.",
+    "backgroundAlt": "Imagen de fondo de techado",
+    "roofInspection": "Inspección de Techo",
+    "roofInspectionDesc": "Evaluamos el estado actual de su techo y proporcionamos un informe honesto.",
+    "freeEstimate": "Presupuesto Gratis",
+    "freeEstimateDesc": "Obtenga un presupuesto detallado sin compromiso para sus necesidades de techado.",
+    "repairInstall": "Reparación e Instalación",
+    "repairInstallDesc": "Nos encargamos de todas las reparaciones e instalaciones con los mejores materiales.",
+    "finalInspection": "Inspección Final",
+    "finalInspectionDesc": "Una vez completado, nos aseguramos de que su propiedad esté limpia y segura."
+  },
+
+
+    "servicesPage": {
+      "title": "Nuestros Servicios de Techado",
+      "roofRepair": {
+        "title": "Reparación de techos",
+        "description": "Brindamos reparaciones expertas para solucionar filtraciones y daños."
+      },
+      "roofInstallation": {
+        "title": "Instalación de techos",
+        "description": "Instalaciones de alta calidad para propiedades residenciales y comerciales."
+      },
+      "gutterInstallation": {
+        "title": "Instalación de canaletas",
+        "description": "Instalación profesional de canaletas para proteger su hogar del agua."
+      },
+      "emergencyRoofing": {
+        "title": "Reparación de emergencia",
+        "description": "Servicios de techado rápidos y confiables disponibles 24/7."
+      },
+      "shingles": {
+        "title": "Tejas",
+        "description": "Tejas duraderas y estéticas para techos residenciales y comerciales."
+      },
+      "demolition": {
+        "title": "Demolición",
+        "description": "Servicios de demolición seguros y eficientes para proyectos de techado."
+      },
+      "torch": {
+        "title": "Cubierta de soplete",
+        "description": "Techado con soplete para una solución sin costuras e impermeable."
+      },
+      "roofTile": {
+        "title": "Instalación de tejas",
+        "description": "Tejas elegantes y duraderas para su propiedad."
+      },
+      "plywood": {
+        "title": "Reemplazo de madera contrachapada",
+        "description": "Hojas de madera contrachapada resistentes para reforzar su estructura."
+      },
+      "homeRepair": {
+        "title": "Reparación del hogar",
+        "description": "Servicios generales de reparación para mantener su hogar en buen estado."
+      }
+    }, 
+
+  "projects": {
+    "recentProjects": "Proyectos Recientes",
+    "residentialRoof": "Reparación de techo residencial",
+    "commercialRoof": "Instalación de techo comercial",
+    "emergencyRoof": "Reparación de emergencia"
+  },
+  "testimonials": {
+    "title": "Testimonios de Clientes",
+    "review1": "¡Servicio excelente, altamente recomendado!",
+    "review2": "Profesional y de excelente calidad.",
+    "review3": "Trabajo de calidad a precios competitivos."
+  },
+
+  "projectsPage": {
+    "title": "Nuestros Reciente Proyectos",
+    "subtitle": "Descubre algunos de nuestros últimos proyectos de techado.",
+    "residentialRoofRepair": {
+      "title": "Reparación de Techo Residencial",
+      "description": "Servicios expertos en reparación de techos para hogares residenciales."
+    },
+    "commercialRoofing": {
+      "title": "Techos Comerciales",
+      "description": "Soluciones de techado duraderas y eficientes para negocios."
+    },
+    "emergencyRoofFix": {
+      "title": "Reparación de Emergencia",
+      "description": "Servicios de reparación rápida de techos para emergencias."
+    },
+    "newRoofInstallation": {
+      "title": "Instalación de Techo Nuevo",
+      "description": "Servicios de instalación de techos de alta calidad."
+    },
+    "gutterInstallation": {
+      "title": "Instalación y Limpieza de Canaletas",
+      "description": "Instalación y mantenimiento profesional de canaletas para techos."
+    }
+  },
+
+"contact": {
+    "title": "Contáctanos",
+    "subtitle": "Estamos aquí para responder tus preguntas y ayudarte con nuestros servicios.",
+    "supportTitle": "Nuestro Soporte",
+    "intro": "Servicios de revestimiento de techos residenciales, comerciales y elastoméricos al alcance",
+    "description": "Nos enorgullecemos de que más del 85% de nuestro trabajo provenga de recomendaciones. Únete a nuestra creciente familia de clientes que eligieron sabiamente: llámanos o contáctanos ahora.",
+    "phoneTitle": "Llámanos",
+    "spanish": "Español",
+    "english": "Inglés",
+    "emailTitle": "Envíanos un correo electrónico"
+  },
+
+  "quote": {
+    "title": "Solicitar una Cotización",
+    "name": "Tu Nombre",
+    "email": "Tu Correo Electrónico",
+    "phone": "Tu Número de Teléfono",
+    "selectService": "Selecciona un Servicio",
+    "details": "Detalles Adicionales",
+    "sending": "Enviando...",
+    "sendRequest": "Enviar Solicitud de Cotización",
+    "successMessage": "¡Tu solicitud de cotización ha sido enviada con éxito!",
+    "errorMessage": "Error al enviar la solicitud. Inténtalo de nuevo."
+  },
+  
+  "services1": {
+    "roofRepair": "Reparación de Techo",
+    "roofInstallation": "Instalación de Techo Nuevo",
+    "gutterInstallation": "Instalación de Canaletas",
+    "maintenance": "Mantenimiento y Limpieza",
+    "emergencyRoofing": "Reparación de Emergencia",
+    "shingles": "Tejas",
+    "demolition": "Demolición",
+    "torch": "Techo de Antorcha",
+    "roofTile": "Instalación de Tejas",
+    "plywood": "Reemplazo de Madera Contrachapada",
+    "homeRepair": "Reparación del Hogar"
+  }
+}

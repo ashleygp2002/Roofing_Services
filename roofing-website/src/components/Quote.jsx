@@ -1,18 +1,19 @@
 import React, { useState } from "react";
+import { useTranslation } from "react-i18next";
 import styled from "styled-components";
 import Navbar from "./Navbar";  
 import roofingImage from "../assets/roofing.jpg";
 import Footer from "./Footer";
 
 const Quote = () => {
+  const { t } = useTranslation();
   const [isSubmitted, setIsSubmitted] = useState(false);
-  const [isSubmitting, setIsSubmitting] = useState(false); 
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleSubmit = async (e) => {
-    e.preventDefault(); 
-
-    if (isSubmitting) return; 
-    setIsSubmitting(true); 
+    e.preventDefault();
+    if (isSubmitting) return;
+    setIsSubmitting(true);
 
     try {
       const formData = new FormData(e.target);
@@ -20,75 +21,75 @@ const Quote = () => {
       const response = await fetch("https://formsubmit.co/ajax/royalcrownroofingservices@gmail.com", {
         method: "POST",
         body: formData,
-        headers: {
-          "Accept": "application/json",
-        },
+        headers: { "Accept": "application/json" },
       });
 
       const data = await response.json();
-
       if (data.success) {
         setIsSubmitted(true);
       } else {
-        alert("Error sending request. Please try again.");
+        alert(t("quote.errorMessage"));
       }
     } catch (error) {
       console.error("Form Submission Error:", error);
-      alert("Something went wrong. Please try again later.");
+      alert(t("quote.errorMessage"));
     } finally {
-      setIsSubmitting(false); 
+      setIsSubmitting(false);
     }
   };
 
   return (
-    <div className="bg-cover bg-center min-h-screen flex flex-col"
-      style={{ backgroundImage: `url(${roofingImage})` }}>
-      
+    <div className="bg-cover bg-center min-h-screen flex flex-col" style={{ backgroundImage: `url(${roofingImage})` }}>
       <Navbar />
 
-      <div className="flex flex-grow items-center justify-center">
+      {/* ✅ Added Spacing Above & Below */}
+      <div className="flex flex-grow items-center justify-center mt-16 mb-16">
         <FormWrapper>
           {!isSubmitted ? (
             <>
-              <h1>Request a Quote</h1>
+              <h1>{t("quote.title")}</h1>
               <form onSubmit={handleSubmit}>
-                <input type="text" name="name" placeholder="Your Name" required />
-                <input type="email" name="email" placeholder="Your Email" required />
-                <input type="tel" name="phone" placeholder="Your Phone Number" required />
+                <input type="text" name="name" placeholder={t("quote.name")} required />
+                <input type="email" name="email" placeholder={t("quote.email")} required />
+                <input type="tel" name="phone" placeholder={t("quote.phone")} required />
 
                 {/* Service Dropdown */}
                 <Select name="service" required>
-                  <option value="">Select a Service</option>
-                  <option value="Roof Repair">Roof Repair</option>
-                  <option value="New Roof Installation">New Roof Installation</option>
-                  <option value="Gutter Installation">Gutter Installation</option>
-                  <option value="Maintenance & Cleaning">Maintenance & Cleaning</option>
-                  <option value="Emergency Roofing">Emergency Roofing</option>
+                  <option value="">{t("quote.selectService")}</option>
+                  <option value="Roof Repair">{t("services1.roofRepair")}</option>
+                  <option value="New Roof Installation">{t("services1.roofInstallation")}</option>
+                  <option value="Gutter Installation">{t("services1.gutterInstallation")}</option>
+                  <option value="Maintenance & Cleaning">{t("services1.maintenance")}</option>
+                  <option value="Emergency Roofing">{t("services1.emergencyRoofing")}</option>
+                  <option value="Shingles">{t("services1.shingles")}</option>
+                  <option value="Demolition">{t("services1.demolition")}</option>
+                  <option value="Torch Roofing">{t("services1.torch")}</option>
+                  <option value="Roof Tile Installation">{t("services1.roofTile")}</option>
+                  <option value="Plywood Replacement">{t("services1.plywood")}</option>
+                  <option value="Home Repair">{t("services1.homeRepair")}</option>
                 </Select>
 
-                <textarea name="message" placeholder="Additional Details" required></textarea>
+                <textarea name="message" placeholder={t("quote.details")} required></textarea>
 
                 {/* Hidden Fields for Email Formatting */}
                 <input type="hidden" name="_captcha" value="false" />
                 <input type="hidden" name="_template" value="box" />
 
                 <button type="submit" disabled={isSubmitting} className={`w-full py-2 rounded-md ${isSubmitting ? "bg-gray-500" : "bg-green-600 text-white"}`}>
-                  {isSubmitting ? "Sending..." : "Send Quote Request"}
+                  {isSubmitting ? t("quote.sending") : t("quote.sendRequest")}
                 </button>
               </form>
             </>
           ) : (
-            <SuccessMessage>Your quote request has been sent successfully!</SuccessMessage>
+            <SuccessMessage>{t("quote.successMessage")}</SuccessMessage>
           )}
         </FormWrapper>
       </div>
-      <Footer />
-      
-    </div>
 
+      <Footer />
+    </div>
   );
 };
-
 
 const FormWrapper = styled.div`
   background: rgba(0, 0, 0, 0.3); 

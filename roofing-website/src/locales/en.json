@@ -1,0 +1,149 @@
+{
+  "navbar": {
+    "home": "Home",
+    "services": "Services",
+    "projects": "Projects",
+    "contact": "Contact",
+    "getQuote": "Get a Quote"
+  },
+  "hero": {
+    "title": "Discover Top-Notch Roofing Solutions",
+    "subtitle": "Professional roofing services tailored to your needs."
+  },
+
+  "services": {
+    "title": "How We Work",
+    "subtitle": "A simple and professional process to ensure quality roofing services.",
+    "backgroundAlt": "Roofing background image",
+    "roofInspection": "Roof Inspection",
+    "roofInspectionDesc": "We assess the current condition of your roof and provide an honest report.",
+    "freeEstimate": "Free Estimate",
+    "freeEstimateDesc": "Get a detailed estimate with no obligation for your roofing needs.",
+    "repairInstall": "Repair & Install",
+    "repairInstallDesc": "We handle all repairs and installations with the best materials.",
+    "finalInspection": "Final Inspection",
+    "finalInspectionDesc": "Once complete, we ensure your property is clean and safe."
+  },
+
+    "servicesPage": {
+      "title": "Our Roofing Services",
+      "roofRepair": {
+        "title": "Roof Repair",
+        "description": "We provide expert roof repairs to fix leaks, damage, and wear."
+      },
+      "roofInstallation": {
+        "title": "New Roof Installation",
+        "description": "High-quality roof installations for residential and commercial properties."
+      },
+      "gutterInstallation": {
+        "title": "Gutter Installation",
+        "description": "Professional gutter installation to protect your home from water damage."
+      },
+      "emergencyRoofing": {
+        "title": "Emergency Roofing",
+        "description": "Fast and reliable emergency roofing services available 24/7."
+      },
+      "shingles": {
+        "title": "Shingles",
+        "description": "Durable and aesthetic shingles for residential and commercial roofs."
+      },
+      "demolition": {
+        "title": "Demolition",
+        "description": "Safe and efficient demolition services for roofing projects."
+      },
+      "torch": {
+        "title": "Torch Roofing",
+        "description": "Torch down roofing for a seamless and waterproof solution."
+      },
+      "roofTile": {
+        "title": "Roof Tile Installation",
+        "description": "Elegant and long-lasting roof tiles for your property."
+      },
+      "plywood": {
+        "title": "Plywood Replacement",
+        "description": "Strong plywood sheets to reinforce your roofing structure."
+      },
+      "homeRepair": {
+        "title": "Home Repair",
+        "description": "General home repair services to keep your home in top shape."
+      }
+    },
+
+  "projects": {
+    "recentProjects": "Recent Projects",
+    "residentialRoof": "Residential Roof Repair",
+    "commercialRoof": "Commercial Roof Installation",
+    "emergencyRoof": "Emergency Roof Fix"
+  },
+  "testimonials": {
+    "title": "Client Testimonials",
+    "review1": "Great service, highly recommended!",
+    "review2": "Professional and excellent quality!",
+    "review3": "Quality work at competitive prices."
+  },
+
+  "projectsPage": {
+    "title": "Our Recent Projects",
+    "subtitle": "Check out some of our latest roofing projects.",
+    "residentialRoofRepair": {
+      "title": "Residential Roof Repair",
+      "description": "Expert repair services for residential homes."
+    },
+    "commercialRoofing": {
+      "title": "Commercial Roofing",
+      "description": "Durable and efficient roofing solutions for businesses."
+    },
+    "emergencyRoofFix": {
+      "title": "Emergency Roof Fix",
+      "description": "Quick response emergency roofing services."
+    },
+    "newRoofInstallation": {
+      "title": "New Roof Installation",
+      "description": "High-quality roof installation services."
+    },
+    "gutterInstallation": {
+      "title": "Gutter Installation & Cleaning",
+      "description": "Professional gutter installation and maintenance."
+    }
+  },
+
+"contact": {
+    "title": "Get in Touch",
+    "subtitle": "We’re here to answer your questions and help you with our services.",
+    "supportTitle": "Our Support",
+    "intro": "Residential, Commercial & Elastomeric Roof Coating Services Within Reach",
+    "description": "We pride ourselves on having more than 85% of our work from word-of-mouth. Join our growing family of clients that chose wisely—call us or reach out now.",
+    "phoneTitle": "Call Us",
+    "spanish": "Spanish",
+    "english": "English",
+    "emailTitle": "Email Us"
+  },
+
+  "quote": {
+    "title": "Request a Quote",
+    "name": "Your Name",
+    "email": "Your Email",
+    "phone": "Your Phone Number",
+    "selectService": "Select a Service",
+    "details": "Additional Details",
+    "sending": "Sending...",
+    "sendRequest": "Send Quote Request",
+    "successMessage": "Your quote request has been sent successfully!",
+    "errorMessage": "Error sending request. Please try again."
+  },
+
+  "services1": {
+    "roofRepair": "Roof Repair",
+    "roofInstallation": "New Roof Installation",
+    "gutterInstallation": "Gutter Installation",
+    "maintenance": "Maintenance & Cleaning",
+    "emergencyRoofing": "Emergency Roofing",
+    "shingles": "Shingles",
+    "demolition": "Demolition",
+    "torch": "Torch Roofing",
+    "roofTile": "Roof Tile Installation",
+    "plywood": "Plywood Replacement",
+    "homeRepair": "Home Repair"
+  }
+  
+}
