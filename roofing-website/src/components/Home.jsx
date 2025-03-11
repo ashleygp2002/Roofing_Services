@@ -8,6 +8,7 @@ import testimonial1 from "../assets/testimonial1.png";
 import testimonial2 from "../assets/testimonial2.png";
 import testimonial3 from "../assets/testimonial3.png";
 import Navbar from "./Navbar"; 
+import Footer from "./Footer";
 
 const Home = () => {
   const { t, ready } = useTranslation(); // ✅ Initialize i18next
@@ -71,16 +72,17 @@ const Home = () => {
       {/* Recent Projects */}
       <section className="bg-gray-100 py-12 text-center">
         <h3 className="text-3xl font-semibold">{t("projects.recentProjects")}</h3>
-        <div className="flex justify-center gap-6 mt-6">
-          <div className="w-64 p-4 bg-white shadow-md rounded-lg">
+
+        <div className="flex flex-col sm:flex-row justify-center gap-6 mt-6">
+          <div className="w-80 p-6 bg-white shadow-md rounded-lg mx-auto">
             <img src={project1} alt="Residential Repair" className="rounded w-full h-40 object-cover" />
             <p className="mt-2 font-medium">{t("projects.residentialRoof")}</p>
           </div>
-          <div className="w-64 p-4 bg-white shadow-md rounded-lg">
+          <div className="w-80 p-6 bg-white shadow-md rounded-lg mx-auto">
             <img src={project2} alt="Commercial Roof" className="rounded w-full h-40 object-cover" />
             <p className="mt-2 font-medium">{t("projects.commercialRoof")}</p>
           </div>
-          <div className="w-64 p-4 bg-white shadow-md rounded-lg">
+          <div className="w-80 p-6 bg-white shadow-md rounded-lg mx-auto">
             <img src={project3} alt="Emergency Roof" className="rounded w-full h-40 object-cover" />
             <p className="mt-2 font-medium">{t("projects.emergencyRoof")}</p>
           </div>
@@ -90,18 +92,18 @@ const Home = () => {
       {/* Testimonials */}
       <section className="py-12 text-center">
         <h3 className="text-3xl font-semibold">{t("testimonials.title")}</h3>
-        <div className="flex justify-center gap-6 mt-6">
-          <div className="p-6 bg-white shadow rounded-lg w-64">
+        <div className="flex flex-col sm:flex-row justify-center gap-6 mt-6">
+          <div className="p-6 bg-white shadow rounded-lg w-80 mx-auto">
             <img src={testimonial1} alt="Client 1" className="rounded-full w-16 h-16 mx-auto" />
             <p className="font-medium mt-2">Sergio Dominguez</p>
             <p className="text-gray-600">{t("testimonials.review1")}</p>
           </div>
-          <div className="p-6 bg-white shadow rounded-lg w-64">
+          <div className="p-6 bg-white shadow rounded-lg w-80 mx-auto">
             <img src={testimonial2} alt="Client 2" className="rounded-full w-16 h-16 mx-auto" />
             <p className="font-medium mt-2">Stuart Smith</p>
             <p className="text-gray-600">{t("testimonials.review2")}</p>
           </div>
-          <div className="p-6 bg-white shadow rounded-lg w-64">
+          <div className="p-6 bg-white shadow rounded-lg w-80 mx-auto">
             <img src={testimonial3} alt="Client 3" className="rounded-full w-16 h-16 mx-auto" />
             <p className="font-medium mt-2">Jake Johnson</p>
             <p className="text-gray-600">{t("testimonials.review3")}</p>
@@ -110,14 +112,7 @@ const Home = () => {
       </section>
 
       {/* Footer */}
-      <footer className="bg-gray-900 text-white py-6 text-center">
-        <p className="text-lg font-semibold">RoyalCrown</p>
-        <div className="flex justify-center space-x-6 mt-2">
-          <p className="flex items-center">📞 +1 (323) 590-2647</p>
-          <p className="flex items-center">📧 royalcrownroofingservices@gmail.com</p>
-        </div>
-        <p className="mt-4 text-sm">© 2024 RoyalCrown. All rights reserved.</p>
-      </footer>
+      <Footer />
     </div>
   );
 };

@@ -5,7 +5,7 @@ import Contact from "./components/Contact";
 import Quote from "./components/Quote";
 import Services from "./components/Services";
 import Projects from "./components/Projects";
-import "./i18n"; // ✅ Import i18n globally
+import "./i18n"; //  Import i18n globally
 
 function App() {
   return (
