@@ -50,11 +50,11 @@ const Home = () => {
             ].map((step, index) => (
               <div key={index} className="relative bg-white bg-opacity-20 p-6 rounded-lg shadow-lg flex flex-col items-center text-center">
                 {/* Step Number */}
-                <div className="absolute -top-7 bg-gray-500 text-white text-lg font-bold w-10 h-10 flex items-center justify-center rounded-full">
+                <div className="absolute -top-5 bg-green-500 text-white text-lg font-bold w-7 h-7 flex items-center justify-center rounded-full">
                   {index + 1}
                 </div>
                 {/* Icon */}
-                <div className="w-20 h-20 bg-gray-500 rounded-full flex items-center justify-center text-4xl text-white">
+                <div className="w-20 h-20 bg-red-500 rounded-full flex items-center justify-center text-4xl text-white">
                   {step.icon}
                 </div>
                 {/* Title */}
